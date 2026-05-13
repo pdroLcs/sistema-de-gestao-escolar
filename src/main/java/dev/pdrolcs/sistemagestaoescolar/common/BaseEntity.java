@@ -13,8 +13,7 @@ import java.util.UUID;
 @MappedSuperclass
 @NoArgsConstructor
 @Getter
-@Setter
-public class BaseEntity {
+public abstract class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
