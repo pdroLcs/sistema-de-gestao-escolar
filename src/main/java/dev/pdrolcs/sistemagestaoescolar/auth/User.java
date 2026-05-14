@@ -33,6 +33,7 @@ public class User extends BaseEntity implements UserDetails {
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, name = "role")
+    @Builder.Default
     private Set<Role> roles = new HashSet<>();
 
     @Override
